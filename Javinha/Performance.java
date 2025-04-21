@@ -10,22 +10,22 @@ Mostra média ponderada, notas individuais e aproveitamento.
 
 public class Performance {
 	private Student student;
-	private Classroom classroom;
+	private Course course;
 	private Float average;
 	private Float aproveitamento;
 	private ArrayList<Float> grade_list = new ArrayList<Float>();
 	
-	public Performance(Student student, Classroom classroom) {
+	public Performance(Student student, Course course) {
 		this.student = student;
-		this.classroom = classroom;
+		this.course = course;
 	}
 	
 	public Student getStudent() {
 		return this.student;
 	}
 	
-	public Classroom getClassroom() {
-		return this.classroom;
+	public Course getClassroom() {
+		return this.course;
 	}
 	
 	public Float getAverage() {

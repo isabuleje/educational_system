@@ -35,13 +35,13 @@ public class Student {
 
 	  // Methods
 	  
-	  private void addPerformance(Classroom classroom) {
-		  this.student_performance_history.add(new Performance(this, classroom));
+	  private void addPerformance(Course course) {
+		  this.student_performance_history.add(new Performance(this, course));
 	  }
 	  
-	  private void removePerformance(Classroom classroom) {
+	  private void removePerformance(Course course) {
 		  for (int i = 0; i < this.student_performance_history.size(); i++) {
-			  if (this.student_performance_history.get(i).getClassroom().equals(classroom)) {
+			  if (this.student_performance_history.get(i).getClassroom().equals(course)) {
 				  this.student_performance_history.remove(i);
 				  break;
 			  }
@@ -50,10 +50,11 @@ public class Student {
 	  
 	  public void addClassroom(Classroom classroom){
 	    student_classes.add(classroom);
-	    addPerformance(classroom);
+		addPerformance(classroom.getCourse());
 	  }
+
 	  public void removeClassroom(Classroom classroom){
 	    student_classes.remove(classroom);
-	    removePerformance(classroom);
+		removePerformance(classroom.getCourse());
 	  }
 }
