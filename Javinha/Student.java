@@ -50,10 +50,10 @@ public class Student {
 	  
 	  public void addClassroom(Classroom classroom){
 	    student_classes.add(classroom);
-	    addPerformance(classroom)
+	    addPerformance(classroom);
 	  }
 	  public void removeClassroom(Classroom classroom){
 	    student_classes.remove(classroom);
-	    removePerformance(classroom)
+	    removePerformance(classroom);
 	  }
 }

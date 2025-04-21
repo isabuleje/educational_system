@@ -12,6 +12,7 @@ public class Performance {
 	private Student student;
 	private Classroom classroom;
 	private Float average;
+	private Float aproveitamento;
 	private ArrayList<Float> grade_list = new ArrayList<Float>();
 	
 	public Performance(Student student, Classroom classroom) {
@@ -33,6 +34,10 @@ public class Performance {
 	
 	public ArrayList<Float> getList() {
 		return this.grade_list;
+	}
+
+	public Float getAproveitamento() {
+		return this.aproveitamento;
 	}
 	
 	public void recalculateAverage() {
@@ -60,5 +65,9 @@ public class Performance {
 	public void removeGrade(Float grade) {
 		this.grade_list.remove(grade);
 		this.recalculateAverage();
+	}
+
+	public void setAproveitamento(Float aproveitamento) {
+		this.aproveitamento = aproveitamento;
 	}
 }
