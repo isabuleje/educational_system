@@ -12,7 +12,7 @@ public class Student {
 	  private int idNumber;
 	  private String email;
 	  private ArrayList<Classroom> student_classes = new ArrayList<Classroom>();
-
+	  private ArrayList<Performance> student_performance_history = new ArrayList<Performance>();
 	  // Getters and setters
 	  public void setName(String name){
 	    this.name = name;
@@ -34,10 +34,26 @@ public class Student {
 	  }
 
 	  // Methods
+	  
+	  private void addPerformance(Classroom classroom) {
+		  this.student_performance_history.add(new Performance(this, classroom));
+	  }
+	  
+	  private void removePerformance(Classroom classroom) {
+		  for (int i = 0; i < this.student_performance_history.size(); i++) {
+			  if (this.student_performance_history.get(i).getClassroom().equals(classroom)) {
+				  this.student_performance_history.remove(i);
+				  break;
+			  }
+		  }
+	  }
+	  
 	  public void addClassroom(Classroom classroom){
 	    student_classes.add(classroom);
+	    addPerformance(classroom)
 	  }
 	  public void removeClassroom(Classroom classroom){
 	    student_classes.remove(classroom);
+	    removePerformance(classroom)
 	  }
 }
