@@ -47,6 +47,10 @@ public class Student {
 			  }
 		  }
 	  }
+
+	  public ArrayList<Performance> getStudent_performance_history() {
+		  return student_performance_history;
+	  }
 	  
 	  public void addClassroom(Classroom classroom){
 	    student_classes.add(classroom);
@@ -57,4 +61,7 @@ public class Student {
 	    student_classes.remove(classroom);
 		removePerformance(classroom.getCourse());
 	  }
+	  public ArrayList<Classroom> getStudent_classes() {
+		return student_classes;
+	}
 }

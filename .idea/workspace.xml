@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c0d03e5-798a-432b-bec1-8c2413c09289" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Javinha/Assessment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javinha/Classroom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javinha/Course.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javinha/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javinha/Perfomance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javinha/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javinha/Submission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javinha/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Javinha/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/Javinha/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/Javinha/Teacher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +51,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -80,6 +77,7 @@
       <updated>1745197264951</updated>
       <workItem from="1745197266036" duration="1074000" />
       <workItem from="1745198374715" duration="347000" />
+      <workItem from="1745276796893" duration="2497000" />
     </task>
     <servers />
   </component>

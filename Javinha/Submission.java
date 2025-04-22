@@ -57,7 +57,6 @@ public class Submission {
 	  public Assessment getAssessment(){
 	    return assessment;
 	  }
-	  // To Do: Relation N to N between Student and Assessment
 	  
 	  public void addAssessments(Assessment assessment) {
 		  assessment_list.add(assessment);

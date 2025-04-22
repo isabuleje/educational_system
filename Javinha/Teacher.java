@@ -38,4 +38,7 @@ public class Teacher {
 	  public void removeCourse(Course course){
 	    courses_list.remove(course);
 	  }
+	  public ArrayList<Course> getCourseList(){
+	    return courses_list;
+	  }
 }
