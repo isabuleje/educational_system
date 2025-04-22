@@ -115,6 +115,31 @@ public class Main {
 		assessment2.setWeight(0.3f);
 		assessment3.setWeight(0.4f);
 
+		// Criacao de 3 submissoes
+		Submission submission1 = new Submission();
+		Submission submission2 = new Submission();
+		Submission submission3 = new Submission();
+		submission1.setScore(8);
+		submission2.setScore(9);
+		submission3.setScore(10);
+		submission1.setDateOfSubmission("HOJE");
+		submission2.setDateOfSubmission("AMANHA");
+		submission3.setDateOfSubmission("DEPOIS DE AMANHA");
+		submission1.setComments("PROVA DE MATEMATICA");
+		submission2.setComments("TRABALHO DE LINGUAGEM");
+		submission3.setComments("TRABALHO DE MATEMATICA");
+
+		// relacao student-submissao
+		submission1.setStudent(student1);
+		submission2.setStudent(student2);
+		submission3.setStudent(student1);
+		submission1.setAssessment(assessment1);
+		submission2.setAssessment(assessment2);
+		submission3.setAssessment(assessment3);
+		assessment1.addSubmission(submission1);
+		assessment2.addSubmission(submission2);
+		assessment3.addSubmission(submission3);
+
 		System.out.println("=====" + "Tudo o que temos agora" + "========");
 		System.out.println("Professores");
 
