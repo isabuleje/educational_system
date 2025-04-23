@@ -140,8 +140,11 @@ public class Main {
 			at Javinha.Teacher.addCourse(Teacher.java:47)
 
 		 */
-		Performance performance = new Performance(student1, course1);
-		performance.generateReport();
+		//Performance performance = new Performance(student1, course1);
+		//performance.generateReport();
+		// isso aqui tava errado ^ mas fica de lembrança
+		
+		student1.getPerformanceReport(classroom1).generateReport();
 	}
 }
 
