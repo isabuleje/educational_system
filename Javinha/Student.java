@@ -50,7 +50,7 @@ public class Student {
 	public ArrayList<Performance> getStudent_performance_history() {
 		return student_performance_history;
 	}
-	
+
 	// Methods
 	public void registerStudentToClassroom(Classroom classroom){
 		this.addClassroom(classroom);
@@ -71,6 +71,7 @@ public class Student {
 				found = true;
 				System.out.println(this.student_performance_history.get(i).getGradeList());
 				System.out.println("Nova média: " + this.student_performance_history.get(i).getAverage());
+				System.out.println("tamanho da lista: " + this.getPerformanceReport(classroom).getGradeList().size());
 				break;
 			}
 		}

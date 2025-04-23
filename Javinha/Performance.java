@@ -13,7 +13,6 @@ Mostra média ponderada, notas individuais e aproveitamento.
 public class Performance {
 	private Student student;
 	private Course course;
-	private Assessment assessment;
 	private double average;
 	private double aproveitamento;
 	private ArrayList<Submission> exam_list;
@@ -86,10 +85,11 @@ public class Performance {
 		System.out.println("\n--- Relatório de Desempenho ---");
 		System.out.println("Aluno: " + student.getName());
 		System.out.println("Curso: " + course.getName());
-
+		System.out.println("quantidade de provas que aluno fez nesse curso: " + getGradeList().size());
 		String notas = "Notas: ";
-		for (int i = 0; i < exam_list.size(); i++) {
-			notas += exam_list.get(i).getScore() + " ";
+		for (int i = 0; i < this.getGradeList().size(); i++) {
+			System.out.println("adicionando essa nota aqui no relatorio: " + this.exam_list.get(i).getScore());
+			notas += this.exam_list.get(i).getScore() + " ";
 		}
 		System.out.println(notas);
 		this.recalculateAverage();
