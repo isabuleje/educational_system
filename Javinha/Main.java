@@ -146,9 +146,14 @@ public class Main {
 		Performance report4 = new Performance(student4, course2);
 		Performance report5 = new Performance(student5, course2);
 		report1.addGrade(4f);
+		report1.addGrade(6f);
 		report2.addGrade(3f);
+		report2.addGrade(7f);
 		report3.addGrade(6f);
+		report3.addGrade(9f);
 		report4.addGrade(7f);
+		report4.addGrade(4f);
+		report5.addGrade(6f);
 		report5.addGrade(9f);
 		report1.setAproveitamento(4f);
 		report2.setAproveitamento(3f);
@@ -223,30 +228,30 @@ public class Main {
 		System.out.println();
 		System.out.println("Relatório de desempenho por aluno: ");
 		System.out.print("1: "+ report1.getStudent().getName() + "\n   Curso:" + report1.getClassroom().getName() + "\n   Média Ponderada: "+ report1.getAverage());
-		for(int i=0; i < report1.getGradeList().size(); i++){
-			System.out.print("\n   Notas:" + report1.getGradeList());
-		}
+		System.out.print("\n   Notas:" + report1.getGradeList());
+		System.out.print("\n   Aproveitamento: "+ report1.getAproveitamento());
+
 
 		System.out.println();
 		System.out.print("2: "+ report2.getStudent().getName() + "\n   Curso:" + report2.getClassroom().getName() + "\n   Média Ponderada: "+ report2.getAverage());
-		for(int i=0; i < report2.getGradeList().size(); i++){
-			System.out.print("\n   Notas:" + report2.getGradeList());
-		}
+		System.out.print("\n   Notas:" + report2.getGradeList());
+		System.out.print("\n   Aproveitamento: "+ report2.getAproveitamento());
+
 		System.out.println();
 		System.out.print("3: "+ report3.getStudent().getName() + "\n   Curso:" + report3.getClassroom().getName() + "\n   Média Ponderada: "+ report3.getAverage());
-		for(int i=0; i < report3.getGradeList().size(); i++){
-			System.out.print("\n   Notas:" + report3.getGradeList());
-		}
+		System.out.print("\n   Notas:" + report3.getGradeList());
+		System.out.print("\n   Aproveitamento: "+ report3.getAproveitamento());
+
 		System.out.println();
 		System.out.print("4: "+ report4.getStudent().getName() + "\n   Curso:" + report4.getClassroom().getName() + "\n   Média Ponderada: "+ report4.getAverage());
-		for(int i=0; i < report4.getGradeList().size(); i++){
-			System.out.print("\n   Notas:" + report4.getGradeList());
-		}
+		System.out.print("\n   Notas:" + report4.getGradeList());
+		System.out.print("\n   Aproveitamento: "+ report4.getAproveitamento());
+
 		System.out.println();
 		System.out.print("5: "+ report5.getStudent().getName() + "\n   Curso:" + report5.getClassroom().getName() + "\n   Média Ponderada: "+ report5.getAverage());
-		for(int i=0; i < report5.getGradeList().size(); i++){
-			System.out.print("\n   Notas:" + report5.getGradeList());
-		}
+		System.out.print("\n   Notas:" + report5.getGradeList());
+		System.out.print("\n   Aproveitamento: "+ report5.getAproveitamento());
+
 	}
 
 }

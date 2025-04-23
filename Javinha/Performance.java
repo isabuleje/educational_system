@@ -67,7 +67,7 @@ public class Performance {
 		this.recalculateAverage();
 	}
 
-	public void setAproveitamento(Float aproveitamento) {
+	public void setAproveitamento(float aproveitamento) {
 		this.aproveitamento = aproveitamento;
 	}
 }

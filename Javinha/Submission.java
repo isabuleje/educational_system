@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class Submission {
 	  private Student student;
 	  private Assessment assessment;
-	  private ArrayList<Assessment> assessment_list = new ArrayList<Assessment>();
+
 
 	  private float score;
 	  private String dateOfSubmission;
@@ -58,7 +58,5 @@ public class Submission {
 	    return assessment;
 	  }
 	  
-	  public void addAssessments(Assessment assessment) {
-		  assessment_list.add(assessment);
-	  }
+
 }
