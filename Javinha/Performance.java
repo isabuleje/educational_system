@@ -13,8 +13,8 @@ Mostra média ponderada, notas individuais e aproveitamento.
 public class Performance {
 	private Student student;
 	private Course course;
-	private ArrayList<Assessment> assessments = new ArrayList<>();
-	private ArrayList<Submission> submissions = new ArrayList<>();
+	private Assessment assessment;
+	private Submission submission;
 	private Float average;
 	private Float aproveitamento;
 	private ArrayList<Float> grade_list = new ArrayList<Float>();
@@ -26,13 +26,13 @@ public class Performance {
 	}
 
 	public void addSubmission(Submission submission) {
-		submissions.add(submission);
-		assessments.add(submission.getAssessment());
-		calculateMetrics();
+		this.submission = submission;
+		this.assessment = submission.getAssessment();
+		recalculateAverage();
 	}
 	public void removeSubmission(Submission submission) {
-		submissions.remove(submission);
-		assessments.remove(submission.getAssessment());
+		this.submission = null;
+		this.assessment = null;
 	}
 
 	public Student getStudent() {

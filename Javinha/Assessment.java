@@ -57,7 +57,7 @@ public class Assessment {
 	}
 	public void addSubmission(Submission submission){
 		submissions_list.add(submission);
-		submission.addAssessments(this);
+		submission.setAssessment(this);
 	}
 	public void removeSubmission(Submission submission){
 	submissions_list.remove(submission);

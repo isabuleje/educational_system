@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c0d03e5-798a-432b-bec1-8c2413c09289" name="Changes" comment="" />
+    <list default="true" id="6c0d03e5-798a-432b-bec1-8c2413c09289" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Javinha/Assessment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Javinha/Assessment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Javinha/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javinha/Performance.java" beforeDir="false" afterPath="$PROJECT_DIR$/Javinha/Performance.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

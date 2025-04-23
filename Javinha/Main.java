@@ -121,6 +121,27 @@ public class Main {
 		Todas as submissoes
 		Media ponderada e aproveitamento.
 		 */
+
+		/*
+
+		ta com esse erro, cansada demais pra debugar kkk
+		provavelmente foi pq eu tava usando o arraylist e parei e n mudei tudo ou sla.
+
+
+		Exception in thread "main" java.lang.StackOverflowError
+			at Javinha.Course.setTeacher(Course.java:64)
+			at Javinha.Teacher.addCourse(Teacher.java:47)
+			at Javinha.Course.setTeacher(Course.java:64)
+			at Javinha.Teacher.addCourse(Teacher.java:47)
+			at Javinha.Course.setTeacher(Course.java:64)
+			at Javinha.Teacher.addCourse(Teacher.java:47)
+			at Javinha.Course.setTeacher(Course.java:64)
+			at Javinha.Teacher.addCourse(Teacher.java:47)
+
+		 */
+
+		Performance performance = new Performance(student1, course1);
+		performance.generateReport();
 	}
 }
 
