@@ -41,7 +41,9 @@ public class Classroom {
 	// Methods
 	public void setCourse(Course course){
 		this.course = course;
-		course.addClassroom(this);
+		if (course != null && !course.getClassroomList().contains(this)) {
+			course.addClassroom(this);
+		}
 	}
 	public void removeCourse(){
 		this.course = null;

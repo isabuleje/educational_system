@@ -90,12 +90,21 @@ public class Performance {
 		System.out.println("\n--- Relatório de Desempenho ---");
 		System.out.println("Aluno: " + student.getName());
 		System.out.println("Curso: " + course.getName());
-		System.out.println("Avaliação: " + assessment.getType());
+		if (assessment != null) {
+			System.out.println("Avaliação: " + assessment.getType());
+		} else {
+			System.out.println("Avaliação: Não disponível");
+		}
 
-		System.out.println("\nNotas: " + grade_list);
+		String notas = "Notas: ";
+		for (int i = 0; i < grade_list.size(); i++) {
+			notas += grade_list.get(i) + " ";
+		}
+		System.out.println(notas);
+		this.recalculateAverage();
 		System.out.printf("Média: %.2f%n", average);
 		System.out.printf("Aproveitamento: %.2f", aproveitamento);
-		System.out.println("-----------------------------");
+		System.out.println("\n-----------------------------");
 	}
 }
 

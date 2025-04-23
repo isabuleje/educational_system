@@ -69,6 +69,7 @@ public class Student {
 				this.student_performance_history.get(i).addSubmission(submission);
 				break;
 			}
+
 		}
 
 	}

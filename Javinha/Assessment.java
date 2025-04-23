@@ -53,7 +53,12 @@ public class Assessment {
 	this.classroom = null;
 	}
 	public Classroom getClassroom(){
-	return classroom;
+		if (this.classroom != null) {
+			return this.classroom;
+		}
+		else {
+			return null;
+		}
 	}
 	public void addSubmission(Submission submission){
 		submissions_list.add(submission);

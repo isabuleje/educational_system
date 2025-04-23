@@ -26,6 +26,7 @@ public class Submission {
 	    this.score = score;
 	    this.dateOfSubmission = dateOfSubmission;
 	    this.comments = comments;
+		this.assessment = assessment;
 
 		student.addSubmission(this);
 		assessment.addSubmission(this);
