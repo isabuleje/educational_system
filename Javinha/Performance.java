@@ -46,8 +46,8 @@ public class Performance {
 	public Float getAverage() {
 		return this.average;
 	}
-
-	public ArrayList<Float> getList() {
+	
+	public ArrayList<Float> getGradeList() {
 		return this.grade_list;
 	}
 
@@ -82,7 +82,7 @@ public class Performance {
 		this.recalculateAverage();
 	}
 
-	public void setAproveitamento(Float aproveitamento) {
+	public void setAproveitamento(float aproveitamento) {
 		this.aproveitamento = aproveitamento;
 	}
 
