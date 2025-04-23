@@ -14,15 +14,28 @@ public class Submission {
 	  private Assessment assessment;
 	  private ArrayList<Assessment> assessment_list = new ArrayList<Assessment>();
 
-	  private float score;
+	  private double score;
 	  private String dateOfSubmission;
 	  private String comments;
+
+	  // Construtor sem parametros
+	  public Submission() {}
+
+	// Construtor com parametros
+	public Submission(Student student, Assessment assessment ,double score, String dateOfSubmission, String comments) {
+	    this.score = score;
+	    this.dateOfSubmission = dateOfSubmission;
+	    this.comments = comments;
+
+		student.addSubmission(this);
+		assessment.addSubmission(this);
+	}
 
 	  // Getters and setters
 	  public void setScore(float score){
 	    this.score = score;
 	  }
-	  public float getScore(){
+	  public double getScore(){
 	    return score;
 	  }
 	  public void setDateOfSubmission(String dateOfSubmission){
@@ -62,3 +75,4 @@ public class Submission {
 		  assessment_list.add(assessment);
 	  }
 }
+

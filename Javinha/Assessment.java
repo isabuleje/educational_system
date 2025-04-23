@@ -8,50 +8,62 @@ import java.util.ArrayList;
 */
 
 public class Assessment {
-	 private String type;
-	  private float maxScore;
-	  private float weight;
+	private String type;
+	private float maxScore;
+	private float weight;
 
-	  private Classroom classroom;
-	  private ArrayList<Submission> submissions_list = new ArrayList<Submission>();
+	private Classroom classroom;
+	private ArrayList<Submission> submissions_list = new ArrayList<Submission>();
 
-	  // Getters and setters
-	  public void setType(String type){
-	    this.type = type;
-	  }
-	  public String getType(){
-	    return type;
-	  }
-	  public void setMaxScore(float maxScore){
-	    this.maxScore = maxScore;
-	  }
-	  public float getMaxScore(){
-	    return maxScore;
-	  }
-	  public void setWeight(float weight){
-	    this.weight = weight;
-	  }
-	  public float getWeight(){
-	    return weight;
-	  }
+	// Construtor sem parametros
+	public Assessment() {}
 
-	  // Methods
-	  public void setClassroom(Classroom classroom){
-	    this.classroom = classroom;
-	  }
-	  public void removeClassroom(){
-	    this.classroom = null;
-	  }
-	  public Classroom getClassroom(){
-	    return classroom;
-	  }
-	  public void addSubmission(Submission submission){
-	    submissions_list.add(submission);
-	  }
-	  public void removeSubmission(Submission submission){
-	    submissions_list.remove(submission);
-	  }
-	  public ArrayList<Submission> getSubmissionList(){
-	    return submissions_list;
-	  }
+	// Construtor com parametros
+	public Assessment(String type, float maxScore, float weight) {
+	this.type = type;
+	this.maxScore = maxScore;
+	this.weight = weight;
+	}
+
+	// Getters and setters
+	public void setType(String type){
+	this.type = type;
+	}
+	public String getType(){
+	return type;
+	}
+	public void setMaxScore(float maxScore){
+	this.maxScore = maxScore;
+	}
+	public float getMaxScore(){
+	return maxScore;
+	}
+	public void setWeight(float weight){
+	this.weight = weight;
+	}
+	public float getWeight(){
+	return weight;
+	}
+
+	// Methods
+	public void setClassroom(Classroom classroom){
+	this.classroom = classroom;
+	}
+	public void removeClassroom(){
+	this.classroom = null;
+	}
+	public Classroom getClassroom(){
+	return classroom;
+	}
+	public void addSubmission(Submission submission){
+		submissions_list.add(submission);
+		submission.addAssessments(this);
+	}
+	public void removeSubmission(Submission submission){
+	submissions_list.remove(submission);
+	}
+	public ArrayList<Submission> getSubmissionList(){
+	return submissions_list;
+	}
 }
+

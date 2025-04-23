@@ -16,6 +16,15 @@ public class Course {
     private Teacher teacher;
     private ArrayList<Classroom> classrooms_list = new ArrayList<Classroom>();
 
+    // Construtor sem parametros
+    public Course() {}
+
+    // Construtor com parametros
+    public Course(String name, int courseLoad, String syllabus) {
+        this.name = name;
+        this.courseLoad = courseLoad;
+        this.syllabus = syllabus;
+    }
 
     // Getters and setters
     public void setName(String name){
@@ -40,9 +49,11 @@ public class Course {
     // Methods
     public void addClassroom(Classroom classroom){
         classrooms_list.add(classroom);
+        classroom.setCourse(this);
     }
     public void removeClassroom(Classroom classroom){
         classrooms_list.remove(classroom);
+        classroom.setCourse(null);
     }
     public ArrayList<Classroom> getClassroomList(){
         return classrooms_list;
@@ -50,11 +61,15 @@ public class Course {
 
     public void setTeacher(Teacher teacher){
         this.teacher = teacher;
+        teacher.addCourse(this);
     }
     public void removeTeacher(){
         this.teacher = null;
+        teacher.removeCourse(this);
     }
     public Teacher getTeacher(){
         return teacher;
     }
 }
+
+
