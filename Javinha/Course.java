@@ -62,7 +62,7 @@ public class Course {
     public void setTeacher(Teacher teacher){
         if (this.teacher != teacher) {
             // Remove este curso do professor atual
-            if (this.teacher != null) {
+            if (this.teacher != null && teacher != null) {
                 this.teacher.removeCourse(this);
             }
 

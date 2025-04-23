@@ -143,8 +143,47 @@ public class Main {
 		//Performance performance = new Performance(student1, course1);
 		//performance.generateReport();
 		// isso aqui tava errado ^ mas fica de lembrança
-		
+
 		student1.getPerformanceReport(classroom1).generateReport();
+
+		        // Testando a classe Teacher
+        System.out.println("=== TESTES DA CLASSE TEACHER ===");
+
+        // Verificando os cursos associados ao professor 1
+        System.out.println("Cursos do professor " + teacher1.getName() + ":");
+        for (Course course : teacher1.getCourseList()) {
+            System.out.println("- " + course.getName());
+        }
+
+        // Verificando os cursos associados ao professor 2
+        System.out.println("Cursos do professor " + teacher2.getName() + ":");
+        for (Course course : teacher2.getCourseList()) {
+            System.out.println("- " + course.getName());
+        }
+
+        // Adicionando um novo curso ao professor 1
+        Course newCourse = new Course("Inteligência Artificial", 80, "Coisas de IA");
+        teacher1.addCourse(newCourse);
+        System.out.println("Novo curso adicionado ao professor " + teacher1.getName() + ": " + newCourse.getName());
+
+        // Verificando novamente os cursos do professor 1
+        System.out.println("Cursos atualizados do professor " + teacher1.getName() + ":");
+        for (Course course : teacher1.getCourseList()) {
+            System.out.println("- " + course.getName());
+        }
+
+        // Removendo um curso do professor 1
+        teacher1.removeCourse(course1);
+        System.out.println("Curso removido do professor " + teacher1.getName() + ": " + course1.getName());
+
+        // Verificando novamente os cursos do professor 1 após a remoção
+        System.out.println("Cursos atualizados do professor " + teacher1.getName() + " após remoção:");
+        for (Course course : teacher1.getCourseList()) {
+            System.out.println("- " + course.getName());
+        }
+
+        // Verificando se o curso removido ainda tem o professor associado
+        System.out.println("Professor associado ao curso " + course1.getName() + ": " + (course1.getTeacher() != null ? course1.getTeacher().getName() : "Nenhum"));
 	}
 }
 
