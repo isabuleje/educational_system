@@ -43,8 +43,13 @@ public class Teacher {
 
 	// Methods
 	public void addCourse(Course course){
-		courses_list.add(course);
-		course.setTeacher(this);
+		if (course != null && !courses_list.contains(course)) {
+			courses_list.add(course);
+			// Verifica se o curso já não tem este professor
+			if (!this.equals(course.getTeacher())) {
+				course.setTeacher(this);
+			}
+		}
 	}
 	public void removeCourse(Course course){
 		courses_list.remove(course);

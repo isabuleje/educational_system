@@ -60,8 +60,20 @@ public class Course {
     }
 
     public void setTeacher(Teacher teacher){
-        this.teacher = teacher;
-        teacher.addCourse(this);
+        if (this.teacher != teacher) {
+            // Remove este curso do professor atual
+            if (this.teacher != null) {
+                this.teacher.removeCourse(this);
+            }
+
+            // Atualiza a referência
+            this.teacher = teacher;
+
+            // Adiciona ao novo professor (se não for nulo)
+            if (teacher != null) {
+                teacher.addCourse(this);
+            }
+        }
     }
     public void removeTeacher(){
         this.teacher = null;
