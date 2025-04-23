@@ -32,7 +32,7 @@ public class Performance {
 		return this.average;
 	}
 	
-	public ArrayList<Float> getList() {
+	public ArrayList<Float> getGradeList() {
 		return this.grade_list;
 	}
 

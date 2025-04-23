@@ -13,15 +13,14 @@ Todos os atributos devem ser privados, com acesso controlado por métodos públi
 
 /*
 Implemente um main com os seguintes objetos:
-  2 professores com cursos distintos.
+  2 professores com cursos distintos. //OK
   2 cursos, cada um com ao menos 1 turma.
-  5 alunos matriculados em turmas variadas.
+  5 alunos matriculados em turmas variadas. //OK
   Pelo menos 3 avaliações por turma.
   Submissões cruzadas entre alunos e avaliações.
   Geração de relatório de desempenho por aluno.
 */
 
-//adicionando comentario pra ver se funcionou abrir na ide e dar commit - apagar depois
 
 public class Main {
 
@@ -140,6 +139,24 @@ public class Main {
 		assessment2.addSubmission(submission2);
 		assessment3.addSubmission(submission3);
 
+		// perfomance por aluno
+		Performance report1 = new Performance(student1, course1);
+		Performance report2 = new Performance(student2, course1);
+		Performance report3 = new Performance(student3, course2);
+		Performance report4 = new Performance(student4, course2);
+		Performance report5 = new Performance(student5, course2);
+		report1.addGrade(4f);
+		report2.addGrade(3f);
+		report3.addGrade(6f);
+		report4.addGrade(7f);
+		report5.addGrade(9f);
+		report1.setAproveitamento(4f);
+		report2.setAproveitamento(3f);
+		report3.setAproveitamento(6f);
+		report4.setAproveitamento(7f);
+		report5.setAproveitamento(9f);
+
+
 		System.out.println("=====" + "Tudo o que temos agora" + "========");
 		System.out.println("Professores");
 
@@ -200,6 +217,35 @@ public class Main {
 		System.out.print("5: "+student5.getName() + ". ID: "+ student5.getRegistrationNumber() + ". E-mail: " + student5.getEmail() + ". Matriculado em: ");
 		for (int i=0; i < student5.getStudent_classes().size(); i++) {
 			System.out.print(student5.getStudent_classes().get(i).getCode() + ", ");
+		}
+
+		System.out.println();
+		System.out.println();
+		System.out.println("Relatório de desempenho por aluno: ");
+		System.out.print("1: "+ report1.getStudent().getName() + "\n   Curso:" + report1.getClassroom().getName() + "\n   Média Ponderada: "+ report1.getAverage());
+		for(int i=0; i < report1.getGradeList().size(); i++){
+			System.out.print("\n   Notas:" + report1.getGradeList());
+		}
+
+		System.out.println();
+		System.out.print("2: "+ report2.getStudent().getName() + "\n   Curso:" + report2.getClassroom().getName() + "\n   Média Ponderada: "+ report2.getAverage());
+		for(int i=0; i < report2.getGradeList().size(); i++){
+			System.out.print("\n   Notas:" + report2.getGradeList());
+		}
+		System.out.println();
+		System.out.print("3: "+ report3.getStudent().getName() + "\n   Curso:" + report3.getClassroom().getName() + "\n   Média Ponderada: "+ report3.getAverage());
+		for(int i=0; i < report3.getGradeList().size(); i++){
+			System.out.print("\n   Notas:" + report3.getGradeList());
+		}
+		System.out.println();
+		System.out.print("4: "+ report4.getStudent().getName() + "\n   Curso:" + report4.getClassroom().getName() + "\n   Média Ponderada: "+ report4.getAverage());
+		for(int i=0; i < report4.getGradeList().size(); i++){
+			System.out.print("\n   Notas:" + report4.getGradeList());
+		}
+		System.out.println();
+		System.out.print("5: "+ report5.getStudent().getName() + "\n   Curso:" + report5.getClassroom().getName() + "\n   Média Ponderada: "+ report5.getAverage());
+		for(int i=0; i < report5.getGradeList().size(); i++){
+			System.out.print("\n   Notas:" + report5.getGradeList());
 		}
 	}
 
