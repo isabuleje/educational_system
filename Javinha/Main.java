@@ -89,57 +89,36 @@ public class Main {
 		new Submission(student1, assessment2, 7.5, "01/01/2025", "Pode melhorar");
 		new Submission(student1, assessment3, 9.5, "01/01/2025", "Muito bom trabalho");
 		//student1.addSubmission(submission1);
-		Submission submission4 = new Submission(student2, assessment1, 8.5, "01/01/2025", "Pode melhorar");
-		Submission submission5 = new Submission(student2, assessment2, 7.5, "01/01/2025", "Pode melhorar");
-		Submission submission6 = new Submission(student2, assessment3, 9.5, "01/01/2025", "Muito bom trabalho");
+		new Submission(student2, assessment1, 8.5, "01/01/2025", "Pode melhorar");
+		new Submission(student2, assessment2, 7.5, "01/01/2025", "Pode melhorar");
+		new Submission(student2, assessment3, 9.5, "01/01/2025", "Muito bom trabalho");
 
-		Submission submission7 = new Submission(student3, assessment1, 8.5, "01/01/2025", "Muito bom trabalho");
-		Submission submission8 = new Submission(student3, assessment2, 7.5, "01/01/2025", "Muito bom trabalho");
-		Submission submission9 = new Submission(student3, assessment3, 9.5, "01/01/2025", "Muito bom trabalho");
+		new Submission(student3, assessment1, 8.5, "01/01/2025", "Muito bom trabalho");
+		new Submission(student3, assessment2, 7.5, "01/01/2025", "Muito bom trabalho");
+		new Submission(student3, assessment3, 9.5, "01/01/2025", "Muito bom trabalho");
 
-		Submission submission10 = new Submission(student4, assessment1, 8.5, "01/01/2025", "Muito bom trabalho");
-		Submission submission11 = new Submission(student4, assessment2, 7.5, "01/01/2025", "Muito bom trabalho");
-		Submission submission12 = new Submission(student4, assessment3, 9.5, "01/01/2025", "Muito bom trabalho");
+		new Submission(student4, assessment1, 8.5, "01/01/2025", "Muito bom trabalho");
+		new Submission(student4, assessment2, 7.5, "01/01/2025", "Muito bom trabalho");
+		new Submission(student4, assessment3, 9.5, "01/01/2025", "Muito bom trabalho");
 
 		// Circuitos Eletricos
-		Submission submission13 = new Submission(student1, assessment4, 8.5, "01/01/2025", "Muito bom trabalho");
-		Submission submission14 = new Submission(student1, assessment5, 7.5, "01/01/2025", "Muito bom trabalho");
-		Submission submission15 = new Submission(student1, assessment6, 9.5, "01/01/2025", "Muito bom trabalho");
+		new Submission(student1, assessment4, 8.5, "01/01/2025", "Muito bom trabalho");
+		new Submission(student1, assessment5, 7.5, "01/01/2025", "Muito bom trabalho");
+		new Submission(student1, assessment6, 9.5, "01/01/2025", "Muito bom trabalho");
 
-		Submission submission16 = new Submission(student4, assessment4, 8.5, "01/01/2025", "Muito bom trabalho");
-		Submission submission17 = new Submission(student4, assessment5, 7.5, "01/01/2025", "Muito bom trabalho");
-		Submission submission18 = new Submission(student4, assessment6, 9.5, "01/01/2025", "Muito bom trabalho");
+		new Submission(student4, assessment4, 8.5, "01/01/2025", "Muito bom trabalho");
+		new Submission(student4, assessment5, 7.5, "01/01/2025", "Muito bom trabalho");
+		new Submission(student4, assessment6, 9.5, "01/01/2025", "Muito bom trabalho");
 
-		Submission submission19 = new Submission(student5, assessment4, 8.5, "01/01/2025", "Muito bom trabalho");
-		Submission submission20 = new Submission(student5, assessment5, 7.5, "01/01/2025", "Muito bom trabalho");
-		Submission submission21 = new Submission(student5, assessment6, 9.5, "01/01/2025", "Muito bom trabalho");
+		new Submission(student5, assessment4, 8.5, "01/01/2025", "Muito bom trabalho");
+		new Submission(student5, assessment5, 7.5, "01/01/2025", "Muito bom trabalho");
+		new Submission(student5, assessment6, 9.5, "01/01/2025", "Muito bom trabalho");
+
+		student1.addSubmission(assessment1, 8.5, "01/01/2025", "Bom trabalho");
+
 
 		System.out.println("=== SIMULAÇÃO DO SISTEMA ===");
-		// Fazer um metodo no Peformance que mostre algo como
-		/*
 
-		Nome, Classroom, curso, todas as avaliacoes com nota e peso.
-		Todas as submissoes
-		Media ponderada e aproveitamento.
-		 */
-
-		/*
-
-		ta com esse erro, cansada demais pra debugar kkk
-		provavelmente foi pq eu tava usando o arraylist e parei e n mudei tudo ou sla.
-
-
-		Exception in thread "main" java.lang.StackOverflowError
-			at Javinha.Course.setTeacher(Course.java:64)
-			at Javinha.Teacher.addCourse(Teacher.java:47)
-			at Javinha.Course.setTeacher(Course.java:64)
-			at Javinha.Teacher.addCourse(Teacher.java:47)
-			at Javinha.Course.setTeacher(Course.java:64)
-			at Javinha.Teacher.addCourse(Teacher.java:47)
-			at Javinha.Course.setTeacher(Course.java:64)
-			at Javinha.Teacher.addCourse(Teacher.java:47)
-
-		 */
 		//Performance performance = new Performance(student1, course1);
 		//performance.generateReport();
 		// isso aqui tava errado ^ mas fica de lembrança

@@ -1,5 +1,5 @@
 package Javinha;
-import java.util.ArrayList;
+
 /*
 📤 Submissão (Submission)
     Associa um aluno a uma avaliação específica.
@@ -12,8 +12,6 @@ import java.util.ArrayList;
 public class Submission {
 	  private Student student;
 	  private Assessment assessment;
-
-
 	  private double score;
 	  private String dateOfSubmission;
 	  private String comments;
@@ -28,7 +26,6 @@ public class Submission {
 	    this.comments = comments;
 		this.assessment = assessment;
 
-		student.addSubmission(this);
 		assessment.addSubmission(this);
 	}
 

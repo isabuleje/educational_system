@@ -61,7 +61,8 @@ public class Student {
 		classroom.removeStudent(this);
 	}
 
-	public void addSubmission(Submission submission){
+	public void addSubmission(Assessment assessment, double score, String dataOfSubmission, String comments){
+		Submission submission = new Submission(this, assessment, score, dataOfSubmission, comments);
 		Classroom classroom = submission.getAssessment().getClassroom();
 		boolean found = false;
 		for (int i = 0; i < this.student_performance_history.size(); i++) {
