@@ -14,72 +14,68 @@ public class Performance {
 	private Student student;
 	private Course course;
 	private Assessment assessment;
-	private Submission submission;
-	private Float average;
-	private Float aproveitamento;
-	private ArrayList<Float> grade_list = new ArrayList<Float>();
+	private double average;
+	private double aproveitamento;
+	private ArrayList<Submission> exam_list;
 
 	
 	public Performance(Student student, Course course) {
 		this.student = student;
+		exam_list = new ArrayList<Submission>();
 		this.course = course;
 	}
 
 	public void addSubmission(Submission submission) {
-		this.submission = submission;
-		this.assessment = submission.getAssessment();
-		recalculateAverage();
+		this.exam_list.add(submission);
 	}
-	public void removeSubmission(Submission submission) {
-		this.submission = null;
-		this.assessment = null;
+	public boolean removeSubmission(Submission submission) {
+		if (this.exam_list.contains(submission)) {
+			this.exam_list.remove(submission);
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	public Student getStudent() {
 		return this.student;
 	}
 
-	public Course getClassroom() {
+	public Course getCourse() {
 		return this.course;
 	}
 
-	public Float getAverage() {
+	public double getAverage() {
+		recalculateAverage();
 		return this.average;
 	}
 	
-	public ArrayList<Float> getGradeList() {
-		return this.grade_list;
+	public ArrayList<Double> getGradeList() {
+		ArrayList<Double> returnedlist = new ArrayList<Double>();
+		for (int i = 0; i < exam_list.size(); i++) {
+			returnedlist.add(exam_list.get(i).getScore());
+		}
+		return returnedlist;
 	}
 
-	public Float getAproveitamento() {
+	public double getAproveitamento() {
 		return this.aproveitamento;
 	}
 
 	public void recalculateAverage() {
-		Float tempvar = 0f;
-		if (grade_list.size() == 0) {
+		if (exam_list.size() == 0) {
 			return;
 		}
-
-		for (int i = 0; i < grade_list.size(); i++) {
-			tempvar += grade_list.get(i);
+		double divisor = 0f;
+		double dividendo = 0f;
+		for (int i = 0; i < exam_list.size(); i++) {
+			for (int j = 0; j < exam_list.get(i).getAssessment().getWeight(); j++) {
+				dividendo += exam_list.get(i).getScore();
+				divisor++;
+			}
 		}
 
-		tempvar /= grade_list.size();
-		this.average = tempvar;
-	}
-
-	public void addGrade(Float grade) {
-		this.grade_list.add(grade);
-		this.recalculateAverage();
-		//pode ou não incluir o recalculate
-		//meio que tanto faz se sempre lembrar de recalcular quando mudar algo
-		//mas por via das duvidas fica bom recalcular media sempre que alterar a lista de notas
-	}
-
-	public void removeGrade(Float grade) {
-		this.grade_list.remove(grade);
-		this.recalculateAverage();
+		this.average = dividendo/divisor;
 	}
 
 	public void setAproveitamento(float aproveitamento) {
@@ -90,15 +86,10 @@ public class Performance {
 		System.out.println("\n--- Relatório de Desempenho ---");
 		System.out.println("Aluno: " + student.getName());
 		System.out.println("Curso: " + course.getName());
-		if (assessment != null) {
-			System.out.println("Avaliação: " + assessment.getType());
-		} else {
-			System.out.println("Avaliação: Não disponível");
-		}
 
 		String notas = "Notas: ";
-		for (int i = 0; i < grade_list.size(); i++) {
-			notas += grade_list.get(i) + " ";
+		for (int i = 0; i < exam_list.size(); i++) {
+			notas += exam_list.get(i).getScore() + " ";
 		}
 		System.out.println(notas);
 		this.recalculateAverage();

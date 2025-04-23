@@ -12,8 +12,7 @@ public class Student {
 	private String idNumber;
 	private String email;
 	private ArrayList<Classroom> student_classes = new ArrayList<Classroom>();
-	private ArrayList<Performance> student_performance_history = new ArrayList<Performance>();
-
+	private ArrayList<Performance> student_performance_history;
 	// Construtor sem parametros
 	public Student() {}
 
@@ -22,6 +21,7 @@ public class Student {
 	    this.name = name;
 	    this.idNumber = registrationNumber;
 	    this.email = email;
+		student_performance_history = new ArrayList<Performance>();
 	}
 
 	  // Getters and setters
@@ -50,8 +50,7 @@ public class Student {
 	public ArrayList<Performance> getStudent_performance_history() {
 		return student_performance_history;
 	}
-
-
+	
 	// Methods
 	public void registerStudentToClassroom(Classroom classroom){
 		this.addClassroom(classroom);
@@ -64,20 +63,33 @@ public class Student {
 
 	public void addSubmission(Submission submission){
 		Classroom classroom = submission.getAssessment().getClassroom();
+		boolean found = false;
 		for (int i = 0; i < this.student_performance_history.size(); i++) {
-			if (this.student_performance_history.get(i).getClassroom().equals(classroom)) {
+			if (this.student_performance_history.get(i).getCourse().equals(classroom.getCourse())) {
+				System.out.println("Existe historico do aluno "+ this.getName() + " na turma " + classroom.getCode() + " do curso " + classroom.getCourse().getName() + ". adicionando submissao ao historico.");
 				this.student_performance_history.get(i).addSubmission(submission);
+				found = true;
+				System.out.println(this.student_performance_history.get(i).getGradeList());
+				System.out.println("Nova média: " + this.student_performance_history.get(i).getAverage());
 				break;
 			}
-
+		}
+		if (found == false) {
+			//se o aluno ainda nao tinha historico nessa turma
+			System.out.println("Adicionando historico de desempenho do aluno " + this.getName() + " na turma " + classroom.getCode() + " do curso " + classroom.getCourse().getName());
+			this.student_performance_history.add(new Performance(this, classroom.getCourse()));
+			//historico pra essa turma adicionado na lista de historicos
+			this.student_performance_history.get(this.student_performance_history.size()-1).addSubmission(submission);
+			//submissao adicionada no historico no final da lista de historicos (ultimo adicionado)
+			System.out.println(this.student_performance_history.get(this.student_performance_history.size()-1).getGradeList());
 		}
 
 	}
 
 	public Performance getPerformanceReport(Classroom classroom) {
 		for (int i = 0; i < this.student_performance_history.size(); i++) {
-			if (student_performance_history.get(i).getClassroom().equals(classroom)) {
-				return student_performance_history.get(i);
+			if (this.getStudent_performance_history().get(i).getCourse().equals(classroom.getCourse())) {
+				return this.getStudent_performance_history().get(i);
 			}
 		}
 		return null;
@@ -89,7 +101,7 @@ public class Student {
 	  
 	private void removePerformance(Course course) {
 		for (int i = 0; i < this.student_performance_history.size(); i++) {
-			if (this.student_performance_history.get(i).getClassroom().equals(course)) {
+			if (this.student_performance_history.get(i).getCourse().equals(course)) {
 				this.student_performance_history.remove(i);
 				break;
 			}

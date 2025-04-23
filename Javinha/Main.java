@@ -84,10 +84,11 @@ public class Main {
 
 		// Criando submissoes para as avaliacoes
 		// Banco de Dados
-		Submission submission1 = new Submission(student1, assessment1, 8.5, "01/01/2025", "Bom trabalho");
-		Submission submission2 = new Submission(student1, assessment2, 7.5, "01/01/2025", "Pode melhorar");
-		Submission submission3 = new Submission(student1, assessment3, 9.5, "01/01/2025", "Muito bom trabalho");
 
+		Submission submission1 = new Submission(student1, assessment1, 8.5, "01/01/2025", "Bom trabalho");
+		new Submission(student1, assessment2, 7.5, "01/01/2025", "Pode melhorar");
+		new Submission(student1, assessment3, 9.5, "01/01/2025", "Muito bom trabalho");
+		student1.addSubmission(submission1);
 		Submission submission4 = new Submission(student2, assessment1, 8.5, "01/01/2025", "Pode melhorar");
 		Submission submission5 = new Submission(student2, assessment2, 7.5, "01/01/2025", "Pode melhorar");
 		Submission submission6 = new Submission(student2, assessment3, 9.5, "01/01/2025", "Muito bom trabalho");
@@ -139,7 +140,6 @@ public class Main {
 			at Javinha.Teacher.addCourse(Teacher.java:47)
 
 		 */
-
 		Performance performance = new Performance(student1, course1);
 		performance.generateReport();
 	}
