@@ -121,61 +121,6 @@ public class Main {
 		Todas as submissoes
 		Media ponderada e aproveitamento.
 		 */
-
-		System.out.println("Alunos");
-		System.out.print("1: "+student1.getName() + ". ID: "+ student1.getRegistrationNumber() + ". E-mail: " + student1.getEmail() + ". Matriculado em: ");
-		for (int i=0; i < student1.getStudent_classes().size(); i++) {
-			System.out.print(student1.getStudent_classes().get(i).getCode() + ", ");
-		}
-		System.out.println();
-		System.out.print("2: "+student2.getName() + ". ID: "+ student2.getRegistrationNumber() + ". E-mail: " + student2.getEmail() + ". Matriculado em: ");
-		for (int i=0; i < student2.getStudent_classes().size(); i++) {
-			System.out.print(student2.getStudent_classes().get(i).getCode() + ", ");
-		}
-		System.out.println();
-		System.out.print("3: "+student3.getName() + ". ID: "+ student3.getRegistrationNumber() + ". E-mail: " + student3.getEmail() + ". Matriculado em: ");
-		for (int i=0; i < student3.getStudent_classes().size(); i++) {
-			System.out.print(student3.getStudent_classes().get(i).getCode() + ", ");
-		}
-		System.out.println();
-		System.out.print("4: "+student4.getName() + ". ID: "+ student4.getRegistrationNumber() + ". E-mail: " + student4.getEmail() + ". Matriculado em: ");
-		for (int i=0; i < student4.getStudent_classes().size(); i++) {
-			System.out.print(student4.getStudent_classes().get(i).getCode() + ", ");
-		}
-		System.out.println();
-		System.out.print("5: "+student5.getName() + ". ID: "+ student5.getRegistrationNumber() + ". E-mail: " + student5.getEmail() + ". Matriculado em: ");
-		for (int i=0; i < student5.getStudent_classes().size(); i++) {
-			System.out.print(student5.getStudent_classes().get(i).getCode() + ", ");
-		}
-
-		System.out.println();
-		System.out.println();
-		System.out.println("Relatório de desempenho por aluno: ");
-		System.out.print("1: "+ report1.getStudent().getName() + "\n   Curso:" + report1.getClassroom().getName() + "\n   Média Ponderada: "+ report1.getAverage());
-		System.out.print("\n   Notas:" + report1.getGradeList());
-		System.out.print("\n   Aproveitamento: "+ report1.getAproveitamento());
-
-
-		System.out.println();
-		System.out.print("2: "+ report2.getStudent().getName() + "\n   Curso:" + report2.getClassroom().getName() + "\n   Média Ponderada: "+ report2.getAverage());
-		System.out.print("\n   Notas:" + report2.getGradeList());
-		System.out.print("\n   Aproveitamento: "+ report2.getAproveitamento());
-
-		System.out.println();
-		System.out.print("3: "+ report3.getStudent().getName() + "\n   Curso:" + report3.getClassroom().getName() + "\n   Média Ponderada: "+ report3.getAverage());
-		System.out.print("\n   Notas:" + report3.getGradeList());
-		System.out.print("\n   Aproveitamento: "+ report3.getAproveitamento());
-
-		System.out.println();
-		System.out.print("4: "+ report4.getStudent().getName() + "\n   Curso:" + report4.getClassroom().getName() + "\n   Média Ponderada: "+ report4.getAverage());
-		System.out.print("\n   Notas:" + report4.getGradeList());
-		System.out.print("\n   Aproveitamento: "+ report4.getAproveitamento());
-
-		System.out.println();
-		System.out.print("5: "+ report5.getStudent().getName() + "\n   Curso:" + report5.getClassroom().getName() + "\n   Média Ponderada: "+ report5.getAverage());
-		System.out.print("\n   Notas:" + report5.getGradeList());
-		System.out.print("\n   Aproveitamento: "+ report5.getAproveitamento());
-
 	}
 }
 
